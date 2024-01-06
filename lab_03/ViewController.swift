@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     @IBOutlet weak var conditionLabel: UILabel!
     
     let locationManager = CLLocationManager()
+    private var searchedCitiesWeatherResponses: [WeatherResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,20 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
         textField.resignFirstResponder()
         loadWeather(search: searchTextField.text)
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToScreen2" {
+            if let destinationVC = segue.destination as? Screen2ViewController {
+                destinationVC.items = searchedCitiesWeatherResponses.map { weatherResponse in
+                    return Cities(cityName: weatherResponse.location.name, temperature: "\(weatherResponse.current.temp_c) °C", icon: UIImage(systemName: getSymbolName(for: weatherResponse.current.condition.code)))
+                }
+            }
+        }
+    }
+    
+    @IBAction func citiesTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToScreen2", sender: self)
     }
     
     @IBAction func onLocationTapped(_ sender: UIButton) {
@@ -103,11 +118,11 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
                     case 0..<5:
                         colorSet = UIColor(hex: "1F2124")
                     case 5..<10:
-                        colorSet = UIColor(hex: "d5ad0b")
+                        colorSet = UIColor(hex: "313439")
                     case 10..<15:
-                        colorSet = UIColor(hex: "EFF1F3")
+                        colorSet = UIColor(hex: "43484e")
                     case 15..<20:
-                        colorSet = UIColor(hex: "8796AF")
+                        colorSet = UIColor(hex: "555b63")
                     default:
                         colorSet = UIColor(hex: "1F2124")
                     }
@@ -130,6 +145,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
                         self.weatherConditionImage.image = UIImage(systemName: weatherSymbolName)
                     }
                 }
+                self.searchedCitiesWeatherResponses.append(weatherResponse)
             }
         }
         

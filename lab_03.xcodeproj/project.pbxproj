@@ -13,6 +13,7 @@
 		AD71D27A2AFD26C5005CA8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD71D2782AFD26C5005CA8E2 /* Main.storyboard */; };
 		AD71D27C2AFD26C6005CA8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD71D27B2AFD26C6005CA8E2 /* Assets.xcassets */; };
 		AD71D27F2AFD26C6005CA8E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD71D27D2AFD26C6005CA8E2 /* LaunchScreen.storyboard */; };
+		ADAAECEF2B188BFC006EA92D /* Screen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAAECEE2B188BFC006EA92D /* Screen2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AD71D27B2AFD26C6005CA8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD71D27E2AFD26C6005CA8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD71D2802AFD26C6005CA8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADAAECEE2B188BFC006EA92D /* Screen2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				AD71D2742AFD26C5005CA8E2 /* SceneDelegate.swift */,
 				AD71D2762AFD26C5005CA8E2 /* ViewController.swift */,
 				AD71D2782AFD26C5005CA8E2 /* Main.storyboard */,
+				ADAAECEE2B188BFC006EA92D /* Screen2ViewController.swift */,
 				AD71D27B2AFD26C6005CA8E2 /* Assets.xcassets */,
 				AD71D27D2AFD26C6005CA8E2 /* LaunchScreen.storyboard */,
 				AD71D2802AFD26C6005CA8E2 /* Info.plist */,
@@ -141,6 +144,7 @@
 				AD71D2772AFD26C5005CA8E2 /* ViewController.swift in Sources */,
 				AD71D2732AFD26C5005CA8E2 /* AppDelegate.swift in Sources */,
 				AD71D2752AFD26C5005CA8E2 /* SceneDelegate.swift in Sources */,
+				ADAAECEF2B188BFC006EA92D /* Screen2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
